@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PickupConfiguration", "PickupConfiguration.csproj", "{B51D7F36-B6BF-474E-AB02-DF8F4D32AA0C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B51D7F36-B6BF-474E-AB02-DF8F4D32AA0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B51D7F36-B6BF-474E-AB02-DF8F4D32AA0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B51D7F36-B6BF-474E-AB02-DF8F4D32AA0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B51D7F36-B6BF-474E-AB02-DF8F4D32AA0C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {54B3E8B5-DA80-4DB8-8A03-DBCC17B9AF3D}
+	EndGlobalSection
+EndGlobal

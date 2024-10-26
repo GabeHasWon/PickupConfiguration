@@ -1,0 +1,17 @@
+--- Pickup Text Configuration ---
+commissioned by Giir
+developed by GabeHasWon
+
+A simple client-side mod that allows you to modify how and where item pickup text dislpays on the screen.
+Three types:
+	Screen:
+		This shows up somewhere on the screen, much like a UI element.
+		The position, scale and display time can be modified to your liking.
+
+	Chat:
+		This shows up in the chat. 
+		It behaves like any other chat message.
+
+	Off:
+		If for some reason this mod is causing issues, this option can fully turn off the mod.
+		This can be immediately undone (or redone) in the settings in-game any time.

@@ -25,6 +25,7 @@ internal class PickupConfig : ModConfig
 
     [DefaultValue(1f)]
     [Range(0.5f, 3f)]
+    [Increment(0.1f)]
     public float Scale { get; set; }
 
     [DefaultValue(2f)]

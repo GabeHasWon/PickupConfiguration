@@ -4,6 +4,7 @@ global using Microsoft.Xna.Framework;
 using Terraria.ID;
 using System.Numerics;
 using System;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace PickupConfiguration;
 
@@ -17,7 +18,35 @@ public class PickupConfiguration : Mod
 
         if (type == PickupConfig.ConfigType.Chat)
         {
-            Main.NewText($"{newItem.stack}x [i:{newItem.type}] [c/{GetRarityColor(newItem.rare).Hex3()}:{newItem.Name}");
+            string s = $"{stack}x [i:{newItem.type}] [c/{GetRarityColor(newItem.rare).Hex3()}:{newItem.Name}]";
+            long coinValue = 0L;
+            Color coinColor = Color.White;
+
+            if (newItem.type == ItemID.CopperCoin)
+            {
+                coinValue += stack;
+                coinColor = new Color(246, 138, 96);
+            }
+            else if (newItem.type == ItemID.SilverCoin)
+            {
+                coinValue += 100 * stack;
+                coinColor = new Color(181, 192, 193);
+            }
+            else if (newItem.type == ItemID.GoldCoin)
+            {
+                coinValue += 10000 * stack;
+                coinColor = new Color(224, 201, 92);
+            }
+            else if (newItem.type == ItemID.PlatinumCoin)
+            {
+                coinValue += 1000000 * stack;
+                coinColor = new Color(220, 220, 198);
+            }
+
+            if (coinValue > 0)
+                s = $"[c/{coinColor.Hex3()}:{PopupText.ValueToName(coinValue)}]";
+
+            Main.NewText(s);
             return -1;
         }
         else if (type == PickupConfig.ConfigType.Screen)

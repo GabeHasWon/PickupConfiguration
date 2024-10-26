@@ -76,7 +76,7 @@ internal class ScreenPickupUIState : UIState
             if (pickup.coinText)
                 text = PopupText.ValueToName(pickup.coinValue);
 
-            Vector2 size = FontAssets.MouseText.Value.MeasureString(text) * scale;
+            Vector2 size = FontAssets.MouseText.Value.MeasureString(text); // This is unscaled because it formats better for some reason
             var pos = GetPosition(i, screenPos, scale, size);
             Color col = pickup.color * pickup.alpha;
             ChatManager.DrawColorCodedStringWithShadow(Main.spriteBatch, FontAssets.MouseText.Value, text, pos, col, 0f, screenPos * size, new Vector2(scale));
@@ -87,7 +87,7 @@ internal class ScreenPickupUIState : UIState
 
     private static Vector2 GetPosition(int i, Vector2 screenPos, float scale, Vector2 size)
     {
-        Vector2 originPos = screenPos * new Vector2(Main.screenWidth - 200, Main.screenHeight - 80) + new Vector2(100, 40);
+        Vector2 originPos = screenPos * new Vector2(Main.screenWidth - 400, Main.screenHeight - 80) + new Vector2(200, 40);
         float yOff = 20 * i * scale;
 
         if (screenPos.Y > 0.5f)

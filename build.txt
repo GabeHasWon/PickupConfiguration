@@ -1,4 +1,4 @@
-displayName = Pickup Configuration
+displayName = Pickup Text Configuration
 author = GabeHasWon
 version = 0.1
 side = Client

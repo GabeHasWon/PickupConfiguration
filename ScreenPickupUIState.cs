@@ -45,6 +45,9 @@ internal class ScreenPickupUIState : UIState
 
     public override void Update(GameTime gameTime)
     {
+        if (Main.gamePaused || !Main.hasFocus)
+            return;
+
         for (int i = 0; i < _pickups.Count; i++)
         {
             PopupText pickup = _pickups[i];
@@ -52,6 +55,8 @@ internal class ScreenPickupUIState : UIState
             if (pickup.lifeTime-- < 0)
                 pickup.alpha -= 0.015f;
         }
+
+        _pickups.RemoveAll(x => x.alpha <= 0);
     }
 
     protected override void DrawSelf(SpriteBatch spriteBatch)
@@ -82,7 +87,6 @@ internal class ScreenPickupUIState : UIState
             ChatManager.DrawColorCodedStringWithShadow(Main.spriteBatch, FontAssets.MouseText.Value, text, pos, col, 0f, screenPos * size, new Vector2(scale));
         }
 
-        _pickups.RemoveAll(x => x.alpha <= 0);
     }
 
     private static Vector2 GetPosition(int i, Vector2 screenPos, float scale, Vector2 size)

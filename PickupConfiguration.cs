@@ -2,9 +2,6 @@ global using Terraria.ModLoader;
 global using Terraria;
 global using Microsoft.Xna.Framework;
 using Terraria.ID;
-using System.Numerics;
-using System;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace PickupConfiguration;
 

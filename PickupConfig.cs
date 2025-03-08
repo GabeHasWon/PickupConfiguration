@@ -31,4 +31,7 @@ internal class PickupConfig : ModConfig
     [DefaultValue(2f)]
     [Range(0.5f, 5f)]
     public float TextLifeTimeMultiplier { get; set; }
+
+    [DefaultValue(false)]
+    public bool UnrestrictedScreenPosition { get; set; }
 }

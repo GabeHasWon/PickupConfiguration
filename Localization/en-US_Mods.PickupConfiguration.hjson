@@ -26,6 +26,15 @@ Configs: {
 			Label: Text Life Time Multiplier
 			Tooltip: How long Screen-type popups text lasts as a multiplier.
 		}
+
+		UnrestrictedScreenPosition: {
+			Label: Unrestricted Screen Position
+			Tooltip:
+				'''
+				Allows you to put the Screen pickup text anywhere on screen. Defaults to on. 
+				Restriction generally reduces the jankiness of the UI, as the text is wonky.
+				'''
+		}
 	}
 
 	ConfigType: {

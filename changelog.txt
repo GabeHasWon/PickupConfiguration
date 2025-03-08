@@ -1,0 +1,4 @@
+0.1.0.1
+- Added Unrestricted Screen Position config
+- Added above functionality
+- Fixed icon?

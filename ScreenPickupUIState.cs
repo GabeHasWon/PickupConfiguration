@@ -91,7 +91,11 @@ internal class ScreenPickupUIState : UIState
 
     private static Vector2 GetPosition(int i, Vector2 screenPos, float scale, Vector2 size)
     {
-        Vector2 originPos = screenPos * new Vector2(Main.screenWidth - 400, Main.screenHeight - 80) + new Vector2(200, 40);
+        Vector2 off = ModContent.GetInstance<PickupConfig>().UnrestrictedScreenPosition
+            ? new Vector2(Main.screenWidth - 10, Main.screenHeight - 60) + new Vector2(5, 30)
+            : new Vector2(Main.screenWidth - 400, Main.screenHeight - 80) + new Vector2(200, 40);
+
+        Vector2 originPos = screenPos * off;
         float yOff = 20 * i * scale;
 
         if (screenPos.Y > 0.5f)

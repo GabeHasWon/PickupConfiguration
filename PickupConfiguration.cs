@@ -11,6 +11,9 @@ public class PickupConfiguration : Mod
 
     private int HijackItemPopup(On_PopupText.orig_NewText_PopupTextContext_Item_int_bool_bool orig, PopupTextContext context, Item newItem, int stack, bool noStack, bool longText)
     {
+        if (context == PopupTextContext.SonarAlert)
+            return orig(context, newItem, stack, noStack, longText);
+
         PickupConfig.ConfigType type = ModContent.GetInstance<PickupConfig>().Type;
 
         if (type == PickupConfig.ConfigType.Chat)

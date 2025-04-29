@@ -38,7 +38,7 @@ internal class ScreenPickupUI : ModSystem
         {
             layers.Insert(resourceBarIndex, new LegacyGameInterfaceLayer(
                 "PickupConfiguration: Pickup UI",
-                delegate
+                () => 
                 {
                     ScreenInterface.Draw(Main.spriteBatch, Main.gameTimeCache);
                     return true;

@@ -1,4 +1,2 @@
-0.1.0.1
-- Added Unrestricted Screen Position config
-- Added above functionality
-- Fixed icon?
+0.1.0.2
+- Stopped Sonar pickup text from being overriden
